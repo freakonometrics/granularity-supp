@@ -1,0 +1,4 @@
+"Firm","Candidates","Feasible_strict","Feasible_relaxed","Max_feasible_gain","Baseline_next_step_slack"
+"A",8,0,0,NA,-1.214452186038e-08
+"B",84,0,0,NA,-1.214452186038e-08
+"C",244,40,120,-0.000677305297358544,-1.214452186038e-08
