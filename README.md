@@ -15,8 +15,9 @@
   transfers](#6-actuarial-benchmark-deviations-not-insurer-to-insurer-transfers)
 - [7. Recalculated finite unilateral-deviation
   diagnostic](#7-recalculated-finite-unilateral-deviation-diagnostic)
-- [8. Environment and replication
-  audit](#8-environment-and-replication-audit)
+- [8. Independent static best-response check]{8. Independent static best-response check} 
+- [10. Environment and replication
+  audit](#10-environment-and-replication-audit)
 
 
 # The complete R market model
@@ -104,7 +105,7 @@ price boxes; results are local numerical diagnostics.**
 
 # 2. Distribution of high-risk households and cumulative floors
 
-*Reviewer 2, major comments 5–7, 10–11.* The floor is 75% of each
+The floor is 75% of each
 insurer’s initial share in the monitored unit; a uniform initial share
 of one third therefore implies a 25% class floor. The following figures
 show why a commune-level floor need not prohibit **within-commune
@@ -158,7 +159,7 @@ comparison regimes.**
 
 # 3. Quote versus in-force accounting and presence constraints
 
-*Reviewer 2, major comments 3 and 10–12.* Expected claims are evaluated
+Expected claims are evaluated
 on insured risk exposures; portfolio accounting uses **in-force average
 premiums** (`*_pbar`) rather than current quotes (`*_prix`). A segment
 loss ratio exceeding one means expected claims exceed premium revenue in
@@ -211,7 +212,7 @@ which may include negative post-update slacks.**
 
 # 4. Guarded feasibility and corrective joint projection
 
-*Reviewer 2, major comments 6 and 8.* For the guarded regime, we record
+For the guarded regime, we record
 the original jointly proposed candidate and the actually accepted joint
 vector, including backtracking and coordinated repairs. **An accepted
 feasible update does not establish individual optimality.** A future
@@ -245,7 +246,7 @@ nu=0.7.](figures/S4_proposed_vs_accepted_slack.png)
 
 # 5. Renewal intensity, damping and convergence
 
-*Reviewer 2, major comments 5, 6, 9.* Renewal fraction $\lambda$ changes
+Renewal fraction $\lambda$ changes
 the economic reallocation of customers and the mix of premiums collected
 on the retained book. Damping $\nu$ changes the numerical step toward
 quoted best responses. These are **not the same parameter**. Experiments
@@ -298,7 +299,7 @@ damping.](figures/S6_nu_correction_frequencies.png)
 
 # 6. Actuarial benchmark deviations, not insurer-to-insurer transfers
 
-*Reviewer 2, major comment 12.* A premium above the loaded actuarial
+A premium above the loaded actuarial
 benchmark is not a legislated tax paid to another insurer. A premium
 below that benchmark is not a cash subsidy. The originally named
 `tax_paid`/`subsidy_received` components are better described as
@@ -328,7 +329,7 @@ pricing benchmark.](figures/S7_actuarial_reference_deviations.png)
 
 # 7. Recalculated finite unilateral-deviation diagnostic
 
-*Reviewer 2, major comments 1 and 8.* This is a **new, finite
+This is a **new, finite
 perturbation screen**, calculated at the final guarded risk-class state
 rather than loaded from the earlier archived deviation CSV. Each insurer
 is allowed to shift either a single pricing component or all of its
