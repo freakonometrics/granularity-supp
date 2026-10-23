@@ -1,4 +1,4 @@
-# Reviewer numerical evidence — generated from the simulation code
+# Additional numerical evidence
 
 - [The complete R market model](#the-complete-r-market-model)
 - [1. Experimental scenarios and optimizer
