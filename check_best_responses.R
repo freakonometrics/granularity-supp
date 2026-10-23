@@ -1,10 +1,4 @@
-# =====================================================================
-# R2.1 — independent scalar best-response validation, no SQP / no nloptr.
-# Reproduces exactly the 20-commune, seed-123 cost and Dirichlet generator.
-# Architecture: A national, B communal, C commune x risk cell.
-# Output is SEPARATE from the ongoing 200-iteration FULL calculations.
-# Run: source("check_R21_best_responses.R")
-# =====================================================================
+
 local({
   options(stringsAsFactors = FALSE)
   ROOT <- getwd()
