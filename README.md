@@ -15,7 +15,8 @@
   transfers](#6-actuarial-benchmark-deviations-not-insurer-to-insurer-transfers)
 - [7. Recalculated finite unilateral-deviation
   diagnostic](#7-recalculated-finite-unilateral-deviation-diagnostic)
-- [8. Independent static best-response check](#8-Independent-static-best-response-check) 
+- [8. Independent static best-response check](#8-Independent-static-best-response-check)
+- [9. Lambda sensitivity check](#9-Lambda-sensitivity-check) 
 - [10. Environment and replication
   audit](#10-environment-and-replication-audit)
 
@@ -385,6 +386,12 @@ The validation files report (approximate display precision):
 | A | 3,131.860 | 3,131.860 | 0 | 3.04e-11 |
 | B | 4,969.640 | 4,969.640 | 0 | 4.41e-10 |
 | C | 7,505.362 | 7,505.362 | 0 | 4.69e-10 |
+
+</div>
+
+# 9. Lambda sensitivity check
+
+...
 
 </div>
 
