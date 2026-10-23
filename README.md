@@ -353,7 +353,41 @@ deviation scan; relaxed tolerance 5e-8.**
 
 </div>
 
-# 8. Environment and replication audit
+# 8. Independent static best-response check 
+
+Run:
+
+```tet
+source("check_best_responses.R")
+```
+
+It initializes 20 synthetic communes and 60 risk cells using seed 123; it solves 81 one-dimensional best-response problems (one national, 20 commune, 60 cell prices), independently of the SQP solver. 
+
+```text
+R1 pooled quote 3.2298046700; 20 communes; 60 risk cells
+R1 iter 1: price residual 2.18; C high-risk 0.13427
+R1 iter 5: price residual 0.0834; C high-risk 0.12103
+R1 iter 10: price residual 0.00147; C high-risk 0.12104
+R1 iter 15: price residual 9.51e-05; C high-risk 0.12102
+R1 iter 20: price residual 5.33e-06; C high-risk 0.12102
+R1 iter 25: price residual 3.07e-07; C high-risk 0.12102
+R1 iter 30: price residual 1.77e-08; C high-risk 0.12102
+R1 iter 35: price residual 1.03e-09; C high-risk 0.12102
+R1 iter 36: price residual 5.8e-10; C high-risk 0.12102
+No SQP RDS provided; independent static profile was validated.
+```
+
+The validation files report (approximate display precision):
+
+| Insurer | Profit at profile | Numerically best-response profit | Unilateral gain | Maximum quote/BR discrepancy |
+|:--|--:|--:|--:|--:|
+| A | 3,131.860 | 3,131.860 | 0 | 3.04e-11 |
+| B | 4,969.640 | 4,969.640 | 0 | 4.41e-10 |
+| C | 7,505.362 | 7,505.362 | 0 | 4.69e-10 |
+
+</div>
+
+# 10. Environment and replication audit
 
 The CSV exports in `tables/` are derived from the new run. They can be
 used for independent figure checks, but **are not read by any
