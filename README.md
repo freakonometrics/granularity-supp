@@ -391,6 +391,22 @@ The validation files report (approximate display precision):
 
 # 9. Lambda sensitivity check
 
+It varies the renewal fraction $\lambda\in\{0.20,0.35,0.70\}$ while
+holding the damping factor $\nu=0.70$, the synthetic market (20 communes,
+three classes, seed 123), and the baseline pricing architectures fixed.
+
+Unlike the historical sensitivity screens in Section 5 (with their own stopping
+rules), this code is designed to report prices, high-risk market shares, and
+**in-force book profits** at a **common finite horizon**. Under no floor,
+quoted prices do not depend on $\lambda$ and the different book paths can be
+computed from the same quote trajectory. Under the commune presence floor,
+$\lambda$ affects the admissible adjustment and the guarded experiment
+must be rerun for each value.
+
+The constrained trajectories are outcomes of a coordinated
+feasibility repair, not certified generalized Nash equilibria. A terminal
+observation at iteration 200 is not automatically stationary. 
+
 ...
 
 </div>
