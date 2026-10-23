@@ -1,17 +1,7 @@
-# =====================================================================
-# R2.3 — lambda sensitivity for quotes, shares, and technical profit.
-# Uses a frozen snapshot of the SAME 20-commune guarded simulation engine.
-# Runs in another R session; writes ONLY to checks_R23/, not figures_v3/.
-# Run: source("check_R23_lambda_sensitivity.R")
-# Variables: CLIMATE_LAMBDA_T (default 120), CLIMATE_LAMBDA_VALUES
-# (default "0.20,0.35,0.70"). To run final 200-period horizon, set T=200.
-# =====================================================================
-
-getwd("/Users/arthurcharpentier/Downloads/climate_parallel_checks/")
 
 local({
   ROOT <- getwd()
-  OUT <- file.path(ROOT,"checks_R23")
+  OUT <- file.path(ROOT,"checks")
   dir.create(OUT,recursive=TRUE,showWarnings=FALSE)
   if (!requireNamespace("nloptr",quietly=TRUE))
     stop('Install nloptr: install.packages("nloptr")')
