@@ -15,7 +15,7 @@
   transfers](#6-actuarial-benchmark-deviations-not-insurer-to-insurer-transfers)
 - [7. Recalculated finite unilateral-deviation
   diagnostic](#7-recalculated-finite-unilateral-deviation-diagnostic)
-- [8. Independent static best-response check](8. Independent static best-response check) 
+- [8. Independent static best-response check](#8-Independent-static-best-response-check) 
 - [10. Environment and replication
   audit](#10-environment-and-replication-audit)
 
