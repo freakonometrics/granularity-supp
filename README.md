@@ -403,9 +403,40 @@ computed from the same quote trajectory. Under the commune presence floor,
 $\lambda$ affects the admissible adjustment and the guarded experiment
 must be rerun for each value.
 
-The constrained trajectories are outcomes of a coordinated
-feasibility repair, not certified generalized Nash equilibria. A terminal
-observation at iteration 200 is not automatically stationary. 
+**Table Guarded commune results at t=120.** Mean quotes and profits are
+in normalized units; high-risk shares are percentages of all high-risk policies.
+
+| lambda | Firm | Mean quote | H-risk share (%) | Book profit |
+|---:|:---:|---:|---:|---:|
+| 0.20 | A | 2.4648 | 58.698 | 970.3 |
+| 0.20 | B | 2.7749 | 34.116 | 2,563.3 |
+| 0.20 | C | 2.4038 | 7.187 | 4,580.2 |
+| 0.35 | A | 2.4883 | 58.573 | 1,031.9 |
+| 0.35 | B | 2.7890 | 34.190 | 2,605.9 |
+| 0.35 | C | 2.4181 | 7.237 | 4,627.2 |
+| 0.70 | A | 2.5013 | 58.521 | 1,057.6 |
+| 0.70 | B | 2.7969 | 34.221 | 2,623.8 |
+| 0.70 | C | 2.4259 | 7.258 | 4,647.0 |
+
+**Table Guarded feasibility at t=120.** Negative minimum slacks are
+within the numerical acceptance threshold `-1e-8`.
+
+| lambda | Backtracks | Joint projections | Price residual | Share residual | Accepted violations | Stationary? |
+|---:|---:|---:|---:|---:|---:|:---:|
+| 0.20 | 72 | 48 | 5.318e-03 | 4.662e-04 | 0 | No |
+| 0.35 | 77 | 43 | 5.774e-03 | 5.504e-04 | 0 | No |
+| 0.70 | 81 | 39 | 2.315e-08 | 6.326e-05 | 0 | No |
+
+The unconstrained replay yields the same terminal C quote of **2.953973**,
+high-risk share **12.1021%**, and book profit **7,505.362** at each tested
+renewal fraction (to display precision). The guarded commune experiment instead
+has C's high-risk share between **7.1867%** and **7.2582%** and its whole-book
+technical profit between **4,580.2** and **4,647.0**. These are
+**common-horizon outcomes**, not converged constrained equilibria: all three
+commune paths fail the joint stationarity criterion at t=120. In particular,
+for lambda=0.35, C has 206.15 high-risk policy units at t=120, whereas the
+separate 200-step main experiment records approximately 197.2. Therefore, do
+not extrapolate the apparent short-horizon stability to the long run.
 
 ...
 
